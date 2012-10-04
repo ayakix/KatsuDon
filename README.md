@@ -7,6 +7,8 @@ Image conversion sets of KatsuDon are altered in accordance with the parent dire
 
 
 ## Usage
+Watch video: http://youtu.be/btrT1HIqfOA
+
 1. Set your default root directory from preferences in status manu.
 2. Make a directory in the root directory. You can choose image conversion methods by changing the directory name such as 200x300, 200x, rrr, png and 200x300rrrpng.
   * 200x300 or 200x is an instruction set to resize the images in the directory.
