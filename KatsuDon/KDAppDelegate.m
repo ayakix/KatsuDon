@@ -23,6 +23,10 @@
     [statusItem setMenu:statusMenu];
     [statusItem setToolTip:@"Katsu-Don"];
     [statusItem setHighlightMode:YES];
+    
+    NSString *dirPath = [self getRootDirPath];
+    if (dirPath != nil)
+        [self registerWatchedDirectory:dirPath];
 }
 
 - (IBAction)openPreferences:(id)sender {
@@ -32,7 +36,7 @@
     NSInteger pressedButton = [openPanel runModal];
     if (pressedButton == NSOKButton) {
         NSString *dirPath = [[openPanel URL] path];
-        
+        [self setRootDirPath:dirPath];
         [self registerWatchedDirectory:dirPath];
     } else if ( pressedButton == NSCancelButton ){
 //     	NSLog(@"Cancel button was pressed.");
